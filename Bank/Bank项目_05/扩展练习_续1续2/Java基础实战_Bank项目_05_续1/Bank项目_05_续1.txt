@@ -1,0 +1,20 @@
+创建客户账户
+instanceof 运算符的应用提 示：
+修改 Customer 类
+1．修改 Customer 类来处理具有多种类型的联合账户。（例如用数组表示多重性一节所作的，该类必须包括以下的公有方法：addAccount(Account)，getAccount(int)和 getNumOfAccounts()每个 Customer 可以有多个 Account。（声明至少有 5 个）
+2．完成 TestBanking 程序该程序创建一个客户和账户的集合，并生成这些客户及其账户余额的报告。在TestBanking.Java 文件中，你会发现注释块以/***…***/来开头和结尾。这些注释只是必须提供的代码的位置。
+3．使用 instanceof 操作符测试拥有的账户类型，并且将 account_type 设置为适当的值，例如：“SavingsAccount”或“CheckingAccount”
+4．编译并运行该程序，将看到下列结果 
+CUSTOMERS REPORT
+  ================
+Customer: Simms, Jane 
+Savings Account:current balance is ￥500.00 
+Checking Account: current balance is ￥200.00
+Customer: Bryant, Owen 
+Checking Account: current balance is ￥200.00
+Customer: Soley, Tim
+ Savings Account: current balance is ￥1,500.00 
+Checking Account: current balance is ￥200.00
+Customer: Soley, Maria 
+Checking Account: current balance is ￥200.00
+Savings Account: current balance is ￥150.
