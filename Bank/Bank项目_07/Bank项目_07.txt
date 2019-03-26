@@ -1,0 +1,12 @@
+创建 OverdraftException 类
+1． 在 banking.domain 包中建立一个共有类 OverdraftException. 这个扩展 Exception 类。
+2． 添加一个 double 类型的私有属性 deficit.增加一个共有访问方法getDeficit
+3． 添加一个有两个参数的共有构造器。deficit 参数初始化 deficit 属性修改 Account 类
+4． 重写 withdraw 方法使它不返回值（即 void）.声明方法抛出overdraftException异常
+5． 修改代码抛出新异常，指明“资金不足”以及不足数额（当前余额扣除请求的数额）修改 CheckingAccount 类
+6． 重写 withdraw 方法使它不返回值（即 void）.声明方法抛出overdraftException异常7． 修改代码使其在需要时抛出异常。两种情况要处理：第一是存在没有透支保  护的赤字，对这个异常使用 “no overdraft protection”信息。第二是overdraftProtection 数 额 不 足 以 弥 补 赤 字 ： 对 这 个 异 常 可 使用 ”Insufficient funds for overdraft protection” 
+信息编译并运行 TestBanking
+ 程序Customer [simms,Jane]has a checking balance of 200.0 with a 500.0 
+overdraft protectionChecking Acct[Jane Simms]: withdraw 150.00Checking Acct[Jane Simms]: deposit 22.50Checking Acct[Jane Simms]: withdraw 147.62Checking Acct[Jane Simms]: withdraw 470.00 
+Exception: Insufficient funds for overdraft protection Deifcit:470.0Customer [Simms,Jane]has a checking balance of 0.0Customer [Bryant,Owen]has a checking balance of 200.0Checking Acct[Bryant,Owen]: 
+withdraw 100.00Checking Acct[Bryant,Owen]: deposit25.00Checking Acct[Bryant,Owen]: withdraw 175.00Exception: no overdraft protection Deficit:50.0Customer [Bryant,Owen]has a checking balance of 125
